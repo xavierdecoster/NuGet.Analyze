@@ -133,6 +133,6 @@
     <value>An unknown command has been used. Please profide a valid command.</value>
   </data>
   <data name="AnalyzeCommandUsageSummary" xml:space="preserve">
-    <value>&lt;Tfs&gt; -Repository [repository]</value>
+    <value>&lt;Tfs | FileSystem&gt; [options]</value>
   </data>
 </root>

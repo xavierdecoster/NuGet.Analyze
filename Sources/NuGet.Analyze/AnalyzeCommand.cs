@@ -13,7 +13,7 @@ namespace NuGet.Analyze
         private readonly IEnumerable<IRepositoryWalker> sourceControlWalkers;
 
         [ImportingConstructor]
-        public AnalyzeCommand(IEnumerable<IRepositoryWalker> sourceControlWalkers)
+        public AnalyzeCommand([ImportMany]IEnumerable<IRepositoryWalker> sourceControlWalkers)
         {
             this.sourceControlWalkers = sourceControlWalkers;
         }

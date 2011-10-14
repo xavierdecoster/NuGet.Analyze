@@ -106,7 +106,7 @@ namespace NuGet.Analyze {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;Tfs&gt; -Repository [repository].
+        ///   Looks up a localized string similar to &lt;Tfs | FileSystem&gt; [options].
         /// </summary>
         internal static string AnalyzeCommandUsageSummary {
             get {
