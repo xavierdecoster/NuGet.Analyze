@@ -2,8 +2,6 @@ Intro
 =====
 NuGet.Analyze is a proof-of-concept of a NuGet extension meant to provide repository analysis functionality in terms of NuGet package dependencies.
 
----
-
 Problem Statement
 =================
 Software Factories usually build and maintain frameworks and reusable components alongside their main products.
