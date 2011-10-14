@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>NuGet.Analyze.Installer</id>
+    <version>1.0</version>
+    <title>NuGet Analyze Installer</title>
+    <authors>Xavier Decoster</authors>
+    <owners>Xavier Decoster</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+      This NuGet package automates the installation of the NuGet.Analyze package into your LOCALAPPDATA\NuGet\Commands
+    </description>
+    <tags>extension, nuget, analyse, tfs, commandline, ConsoleExtension</tags>
+  </metadata>
+  <files>
+    <file src="init.ps1"
+          target="tools"/>
+  </files>
+</package>

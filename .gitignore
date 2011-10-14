@@ -8,3 +8,9 @@ TestResults
 # user specific files
 *.user
 *.suo
+
+# nuget package files
+*.nupkg
+
+# potentially nuget.exe.old after updating
+*.old

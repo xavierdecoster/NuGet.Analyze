@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1BAEDB88-3D3C-4710-A4B0-5F7FA4FB241D}"
+	ProjectSection(SolutionItems) = preProject
+		AssemblyVersionInfo.cs = AssemblyVersionInfo.cs
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuGet.Analyze", "NuGet.Analyze\NuGet.Analyze.csproj", "{3B31BCF2-D0FA-4B4E-9D8F-F8B275CDAC57}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{0CB9CFBA-4EAB-4D42-A405-A8F63436B1B9}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\init.ps1 = .nuget\init.ps1
+		.nuget\NuGet.Analyze.1.0.nuspec = .nuget\NuGet.Analyze.1.0.nuspec
+		.nuget\NuGet.Analyze.Installer.1.0.nuspec = .nuget\NuGet.Analyze.Installer.1.0.nuspec
+		.nuget\nuspec.xsd = .nuget\nuspec.xsd
+		.nuget\uninstall.ps1 = .nuget\uninstall.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{BC55DC57-229C-4882-B408-01D95D177263}"
+	ProjectSection(SolutionItems) = preProject
+		Tests\TraceAndTestImpact.testsettings = Tests\TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuGet.Analyze.Test", "..\Tests\NuGet.Analyze.Test\NuGet.Analyze.Test.csproj", "{55099349-2B0E-40BC-BA3D-80E64FC665EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B31BCF2-D0FA-4B4E-9D8F-F8B275CDAC57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B31BCF2-D0FA-4B4E-9D8F-F8B275CDAC57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B31BCF2-D0FA-4B4E-9D8F-F8B275CDAC57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B31BCF2-D0FA-4B4E-9D8F-F8B275CDAC57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55099349-2B0E-40BC-BA3D-80E64FC665EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55099349-2B0E-40BC-BA3D-80E64FC665EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55099349-2B0E-40BC-BA3D-80E64FC665EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55099349-2B0E-40BC-BA3D-80E64FC665EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0CB9CFBA-4EAB-4D42-A405-A8F63436B1B9} = {1BAEDB88-3D3C-4710-A4B0-5F7FA4FB241D}
+		{55099349-2B0E-40BC-BA3D-80E64FC665EC} = {BC55DC57-229C-4882-B408-01D95D177263}
+	EndGlobalSection
+EndGlobal
