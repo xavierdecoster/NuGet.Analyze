@@ -4,6 +4,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1BAEDB88-3D3C-4710-A4B0-5F7FA4FB241D}"
 	ProjectSection(SolutionItems) = preProject
 		AssemblyVersionInfo.cs = AssemblyVersionInfo.cs
+		..\COPYRIGHT.txt = ..\COPYRIGHT.txt
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuGet.Analyze", "NuGet.Analyze\NuGet.Analyze.csproj", "{3B31BCF2-D0FA-4B4E-9D8F-F8B275CDAC57}"
@@ -23,6 +24,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{BC55DC57
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuGet.Analyze.Test", "..\Tests\NuGet.Analyze.Test\NuGet.Analyze.Test.csproj", "{55099349-2B0E-40BC-BA3D-80E64FC665EC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Git", "Git", "{7E1EAF8E-4358-45ED-B9C3-635FD4754CC9}"
+	ProjectSection(SolutionItems) = preProject
+		..\.gitignore = ..\.gitignore
+		..\README.md = ..\README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +51,7 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{0CB9CFBA-4EAB-4D42-A405-A8F63436B1B9} = {1BAEDB88-3D3C-4710-A4B0-5F7FA4FB241D}
+		{7E1EAF8E-4358-45ED-B9C3-635FD4754CC9} = {1BAEDB88-3D3C-4710-A4B0-5F7FA4FB241D}
 		{55099349-2B0E-40BC-BA3D-80E64FC665EC} = {BC55DC57-229C-4882-B408-01D95D177263}
 	EndGlobalSection
 EndGlobal
