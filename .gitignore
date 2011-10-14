@@ -1,0 +1,10 @@
+# build output folders
+bin
+obj
+
+# mstest test results
+TestResults
+
+# user specific files
+*.user
+*.suo
