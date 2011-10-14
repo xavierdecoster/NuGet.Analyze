@@ -21,6 +21,9 @@ namespace NuGet.Analyze
         [Option(typeof(AnalyzeCommandResources), "AnalyzeCommandRepositoryDescription")]
         public string Repository { get; set; }
 
+        [Option(typeof(AnalyzeCommandResources), "AnalyzeCommandVerboseDescription")]
+        public bool Verbose { get; set; }
+
         public override void ExecuteCommand()
         {
             RepositoryType action = Arguments.Any() 
@@ -32,7 +35,7 @@ namespace NuGet.Analyze
                 .FirstOrDefault();
 
             if (selectedRepositoryWalker != null)
-                selectedRepositoryWalker.AnalyzeRepository(Repository);
+                selectedRepositoryWalker.AnalyzeRepository(Repository, Verbose);
             else throw new CommandLineException(AnalyzeCommandResources.AnalyzeCommandUnknownCommand);
         }
     }

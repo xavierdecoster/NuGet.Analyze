@@ -7,6 +7,6 @@ namespace NuGet.Analyze
     {
         IConsolePrinter ConsolePrinter { get; }
         RepositoryType CommandAction { get; }
-        void AnalyzeRepository(string repository);
+        void AnalyzeRepository(string repository, bool verbose);
     }
 }

@@ -30,7 +30,7 @@ namespace NuGet.Analyze.Tfs
 
         public RepositoryType CommandAction { get { return RepositoryType.Tfs; } }
 
-        public void AnalyzeRepository(string repository)
+        public void AnalyzeRepository(string repository, bool verbose)
         {
             ConsolePrinter.Log("Analyzing TFS Source Control on server '{0}'", repository);
             if (String.IsNullOrWhiteSpace(repository))
@@ -47,11 +47,11 @@ namespace NuGet.Analyze.Tfs
 
             foreach (KeyValuePair<TfsTeamProjectCollection, ReadOnlyCollection<CatalogNode>> teamProjectCollectionKvp in teamProjectCollectionInfo)
             {
-                AnalyzeTfsTeamProjectCollection(teamProjectCollectionKvp);
+                AnalyzeTfsTeamProjectCollection(teamProjectCollectionKvp, verbose);
             }
         }
 
-        private void AnalyzeTfsTeamProjectCollection(KeyValuePair<TfsTeamProjectCollection, ReadOnlyCollection<CatalogNode>> teamProjectCollectionKvp)
+        private void AnalyzeTfsTeamProjectCollection(KeyValuePair<TfsTeamProjectCollection, ReadOnlyCollection<CatalogNode>> teamProjectCollectionKvp, bool verbose)
         {
             TfsTeamProjectCollection tpc = teamProjectCollectionKvp.Key;
             ConsolePrinter.Log("Team Project Collection '{0}'", tpc.Name);
@@ -64,11 +64,11 @@ namespace NuGet.Analyze.Tfs
             {
                 ConsolePrinter.Log(" -- Team Project '{0}'", teamProject.Name);
 
-                AnalyzeTfsTeamProject(teamProject);
+                AnalyzeTfsTeamProject(teamProject, verbose);
             }
         }
 
-        private void AnalyzeTfsTeamProject(TeamProject teamProject)
+        private void AnalyzeTfsTeamProject(TeamProject teamProject, bool verbose)
         {
             List<PackageDependency> teamProjectDependencies = new List<PackageDependency>();
             string repositorySearchQuery = string.Format("$/{0}/*{1}", teamProject.Name, repositoriesConfigFileName);
@@ -83,7 +83,7 @@ namespace NuGet.Analyze.Tfs
                 }
             }
 
-            ConsolePrinter.PrintPackageDependenciesForProject(teamProjectDependencies);
+            ConsolePrinter.PrintPackageDependenciesForProject(teamProjectDependencies, verbose);
         }
 
         private IEnumerable<PackageDependency> GetPackageDependenciesFromRepositoriesConfig(TeamProject teamProject, Item repository)

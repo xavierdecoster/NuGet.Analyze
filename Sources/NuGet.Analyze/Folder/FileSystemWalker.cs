@@ -24,7 +24,7 @@ namespace NuGet.Analyze.Folder
 
         public RepositoryType CommandAction { get { return RepositoryType.FileSystem; } }
 
-        public void AnalyzeRepository(string repository)
+        public void AnalyzeRepository(string repository, bool verbose)
         {
             // validate arguments
             ConsolePrinter.Log("Analyzing file system path '{0}'", repository);
@@ -39,12 +39,14 @@ namespace NuGet.Analyze.Folder
             // analyze each solution
             foreach (FileInfo solution in solutions)
             {
-                ConsolePrinter.Log("Solution '{0}' in folder '{1}'", solution.Name, solution.DirectoryName);
-                AnalyzePackagesRepository(solution);
+                if (verbose)
+                    ConsolePrinter.Log("Solution '{0}' in folder '{1}'", solution.Name, solution.DirectoryName);
+                else ConsolePrinter.Log("Solution '{0}'", solution.Name);
+                AnalyzePackagesRepository(solution, verbose);
             }
         }
 
-        internal void AnalyzePackagesRepository(FileInfo solution)
+        internal void AnalyzePackagesRepository(FileInfo solution, bool verbose)
         {
             if (solution.Directory == null)
                 return;
@@ -68,14 +70,18 @@ namespace NuGet.Analyze.Folder
                     {
                         FileInfo packagesConfig = fileSystemPathTranslator.GetAbsolutePath(repositoriesConfig, relativePackagesConfigPath);
                         string projectName = GetProjectNameForPackagesConfig(solution, repositoriesConfig, packagesConfig);
-                        if(!string.IsNullOrWhiteSpace(projectName))
-                            ConsolePrinter.Log(" -- Project '{0}' in folder '{1}'", projectName, packagesConfig.DirectoryName);
+                        if (!string.IsNullOrWhiteSpace(projectName))
+                        {
+                            if (verbose)
+                                ConsolePrinter.Log(" -- Project '{0}' in folder '{1}'", projectName, packagesConfig.DirectoryName);
+                            else ConsolePrinter.Log(" -- Project '{0}'", projectName);
+                        }
 
                         using (var packagesConfigStream = File.OpenRead(packagesConfig.FullName))
                         {
                             IEnumerable<PackageDependency> packageDependencies =
                                 configInterpreter.GetPackageDependenciesFromPackagesConfig(XDocument.Load(packagesConfigStream));
-                            ConsolePrinter.PrintPackageDependenciesForProject(packageDependencies);
+                            ConsolePrinter.PrintPackageDependenciesForProject(packageDependencies, verbose);
                         }
                     }
                 }
@@ -84,7 +90,7 @@ namespace NuGet.Analyze.Folder
 
         internal string GetProjectNameForPackagesConfig(FileInfo solution, FileInfo repositoriesConfig, FileInfo packagesConfig)
         {
-            if (packagesConfig.DirectoryName == null) 
+            if (packagesConfig.DirectoryName == null)
                 return null;
 
             string projectName = packagesConfig.DirectoryName.TrimEnd(Path.DirectorySeparatorChar).Split(Path.DirectorySeparatorChar).LastOrDefault();

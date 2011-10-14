@@ -17,8 +17,7 @@ namespace NuGet.Analyze.Test
         private static readonly IConfigInterpreter configInterpreter = new ConfigInterpreter();
         private static FileSystemWalker fileSystemWalker;
 
-        private readonly string repository = @"C:\Sources\tfspreview\KrijtstatieBoekhouding\Dev";
-            //new DirectoryInfo(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName;
+        private readonly string repository = new DirectoryInfo(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName;
 
         /// <summary>
         ///Gets or sets the test context which provides
@@ -81,7 +80,7 @@ namespace NuGet.Analyze.Test
         {
             var solutions = fileSystemWalker.GetSolutionsInDirectory(repository);
             Assert.IsNotNull(solutions);
-            Assert.IsFalse(solutions.IsEmpty());
+            Assert.IsTrue(solutions.IsEmpty());
         }
 
         /// <summary>
@@ -90,7 +89,7 @@ namespace NuGet.Analyze.Test
         [TestMethod]
         public void AnalyzeRepository()
         {
-            fileSystemWalker.AnalyzeRepository(repository);
+            fileSystemWalker.AnalyzeRepository(repository, verbose: true);
             Assert.Inconclusive();
         }
     }

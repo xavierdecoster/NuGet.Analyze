@@ -135,4 +135,7 @@
   <data name="AnalyzeCommandUsageSummary" xml:space="preserve">
     <value>&lt;Tfs | FileSystem&gt; [options]</value>
   </data>
+  <data name="AnalyzeCommandVerboseDescription" xml:space="preserve">
+    <value>Get more detailed output.</value>
+  </data>
 </root>

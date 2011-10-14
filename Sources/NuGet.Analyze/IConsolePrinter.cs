@@ -9,7 +9,7 @@ namespace NuGet.Analyze
     {
         IConsole Console { get; }
 
-        void PrintPackageDependenciesForProject(IEnumerable<PackageDependency> projectDependencies);
+        void PrintPackageDependenciesForProject(IEnumerable<PackageDependency> projectDependencies, bool verbose);
         void Log(string message, params object[] args);
     }
 }

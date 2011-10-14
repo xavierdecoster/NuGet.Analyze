@@ -113,5 +113,14 @@ namespace NuGet.Analyze {
                 return ResourceManager.GetString("AnalyzeCommandUsageSummary", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Get more detailed output..
+        /// </summary>
+        internal static string AnalyzeCommandVerboseDescription {
+            get {
+                return ResourceManager.GetString("AnalyzeCommandVerboseDescription", resourceCulture);
+            }
+        }
     }
 }
