@@ -12,7 +12,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{0CB9CFBA-4EAB-4D42-A405-A8F63436B1B9}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\init.ps1 = .nuget\init.ps1
-		.nuget\NuGet.Analyze.1.1.nuspec = .nuget\NuGet.Analyze.1.1.nuspec
+		.nuget\NuGet.Analyze.1.1.1.nuspec = .nuget\NuGet.Analyze.1.1.1.nuspec
 		.nuget\NuGet.Analyze.Installer.1.0.nuspec = .nuget\NuGet.Analyze.Installer.1.0.nuspec
 		.nuget\nuspec.xsd = .nuget\nuspec.xsd
 		.nuget\uninstall.ps1 = .nuget\uninstall.ps1
