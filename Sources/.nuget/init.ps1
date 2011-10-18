@@ -45,7 +45,7 @@ function ConfigureNuGetCommandLine {
 		Write-Host "Installing 'NuGet.Analyze' into $env:LOCALAPPDATA\NuGet\Commands ..."
 
 		$cmd = "$nugetToolsPath\nuget.exe"
-		$args = "install -excludeVersion -outputDir '$env:LOCALAPPDATA\NuGet\Commands' NuGet.Analyze -Source 'https://go.microsoft.com/fwlink/?LinkID=206669'"
+		$args = "install -excludeVersion -outputDir `"$env:LOCALAPPDATA\NuGet\Commands`" NuGet.Analyze -Source 'https://go.microsoft.com/fwlink/?LinkID=206669'"
 
 		invoke-expression "$cmd $args" | Out-Null
 		Write-Host "Successfully installed 'NuGet.Analyze'."
