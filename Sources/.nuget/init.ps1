@@ -21,10 +21,11 @@ function ConfigureNuGetCommandLine {
     # Install the nuget command line if it doesn't exist
     $solutionDir = Get-SolutionDir
     $nugetToolsPath = (Join-Path $solutionDir .tmp)
+	$pkgSource = "https://go.microsoft.com/fwlink/?LinkID=206669"
     
     #if(!(Test-Path $nugetToolsPath) -or !(Get-ChildItem $nugetToolsPath)) {
 
-        Install-Package NuGet.CommandLine -Source 'https://go.microsoft.com/fwlink/?LinkID=206669'
+        Install-Package NuGet.CommandLine -Source $pkgSource
         
         $nugetExePackage = @(Get-Package NuGet.CommandLine)[0]
         
@@ -45,7 +46,8 @@ function ConfigureNuGetCommandLine {
 		Write-Host "Installing 'NuGet.Analyze' into $env:LOCALAPPDATA\NuGet\Commands ..."
 
 		$cmd = "$nugetToolsPath\nuget.exe"
-		$args = "install -excludeVersion -outputDir `"$env:LOCALAPPDATA\NuGet\Commands`" NuGet.Analyze -Source 'https://go.microsoft.com/fwlink/?LinkID=206669'"
+		$outputDir = "$env:LOCALAPPDATA\NuGet\Commands"
+		$args = "install -excludeVersion -outputDir `"$outputDir`" NuGet.Analyze -Source $pkgSource"
 
 		invoke-expression "$cmd $args" | Out-Null
 		Write-Host "Successfully installed 'NuGet.Analyze'."
