@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>NuGet.InstallCommandLineExtension</id>
+    <version>1.0</version>
+    <title>NuGet InstallCommandLineExtension Cmdlet</title>
+    <authors>Xavier Decoster</authors>
+    <owners>Xavier Decoster</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/xavierdecoster/NuGet.Analyze/blob/master/COPYRIGHT.txt</licenseUrl>
+    <projectUrl>https://github.com/xavierdecoster/NuGet.Analyze</projectUrl>
+    <description>
+      Adds a Install-CommandLineExtension cmdlet to the NuGet Package Manager Console.
+    </description>
+    <summary>
+      This NuGet package automates the installation of the NuGet command line extension packages into the LOCALAPPDATA\NuGet\Commands folder.
+    </summary>
+    <tags>extension install nuget commandline ConsoleExtension</tags>
+  </metadata>
+  <files>
+    <file src="NuGet.InstallCommandLineExtension\init.ps1"
+          target="tools"/>
+    <file src="NuGet.InstallCommandLineExtension\NuGet.InstallCommandLineExtension.psd1"
+          target="tools"/>
+    <file src="NuGet.InstallCommandLineExtension\NuGet.InstallCommandLineExtension.psm1"
+          target="tools"/>
+  </files>
+</package>

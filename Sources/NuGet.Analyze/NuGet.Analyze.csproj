@@ -38,6 +38,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.TeamFoundation.Client, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.TeamFoundation.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
@@ -45,7 +48,7 @@
     <Reference Include="NuGet, Version=1.5.21005.9019, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
       <ExecutableExtension>.exe</ExecutableExtension>
-      <HintPath>..\packages\NuGet.CommandLine.1.5.21005.9019\tools\NuGet.exe</HintPath>
+      <HintPath>..\.nuget\NuGet.exe</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
@@ -86,6 +89,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>"$(SolutionDir)\.nuget\nuget.exe" pack "$(SolutionDir)\.nuget\NuGet.Analyze.nuspec" -outputdirectory "$(SolutionDir)\.nuget"
+"$(SolutionDir)\.nuget\nuget.exe" pack "$(SolutionDir)\.nuget\NuGet.InstallCommandLineExtension.nuspec" -outputdirectory "$(SolutionDir)\.nuget"</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

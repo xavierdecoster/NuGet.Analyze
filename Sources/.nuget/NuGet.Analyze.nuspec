@@ -2,21 +2,33 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>NuGet.Analyze</id>
-    <version>1.1</version>
+    <version>1.2</version>
     <title>NuGet Analyze</title>
     <authors>Xavier Decoster</authors>
     <owners>Xavier Decoster</owners>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://github.com/xavierdecoster/NuGet.Analyze/blob/master/COPYRIGHT.txt</licenseUrl>
     <projectUrl>https://github.com/xavierdecoster/NuGet.Analyze</projectUrl>
     <description>
       Adds an "Analyze" command to NuGet.exe, allowing you to analyze NuGet package dependencies directly from source control, even when no packages checked in.
-      To use this package, install the package using NuGet.exe to %LocalAppData%\NuGet\Commands NuGet.exe Install /ExcludeVersion /OutputDir %LocalAppData%\NuGet\Commands NuGet.Analyze, or simply install 'NuGet.Analyze.Installer'.
     </description>
+    <summary>
+      Provides source code repository analysis functionality in terms of NuGet package dependencies.
+    </summary>
+    <dependencies>
+      <dependency id="NuGet.InstallCommandLineExtension"
+                  version="1.0"/>
+    </dependencies>
     <tags>extension nuget analyse tfs commandline ConsoleExtension</tags>
   </metadata>
   <files>
-    <file src="..\NuGet.Analyze\bin\release\*.dll"
-          target="lib\net40"/>
+    <file src="..\NuGet.Analyze.Cmdlets\bin\release\*.dll"
+          target="tools"/>
+    <file src="NuGet.Analyze\init.ps1"
+          target="tools"/>
+    <file src="NuGet.Analyze\NuGet.Analyze.psd1"
+          target="tools"/>
+    <file src="NuGet.Analyze\NuGet.Analyze.psm1"
+          target="tools"/>
   </files>
 </package>
