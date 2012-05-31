@@ -22,7 +22,7 @@
     <tags>extension nuget analyse tfs commandline ConsoleExtension</tags>
   </metadata>
   <files>
-    <file src="..\NuGet.Analyze.Cmdlets\bin\release\*.dll"
+    <file src="..\NuGet.Analyze.Cmdlets\bin\Release\*.dll"
           target="tools"/>
     <file src="NuGet.Analyze\init.ps1"
           target="tools"/>

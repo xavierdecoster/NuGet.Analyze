@@ -1,10 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 11
+# Visual Studio 2010
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1BAEDB88-3D3C-4710-A4B0-5F7FA4FB241D}"
 	ProjectSection(SolutionItems) = preProject
-		..\COPYRIGHT.txt = ..\COPYRIGHT.txt
 		AssemblyVersionInfo.cs = AssemblyVersionInfo.cs
+		..\COPYRIGHT.txt = ..\COPYRIGHT.txt
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuGet.Analyze", "NuGet.Analyze\NuGet.Analyze.csproj", "{3B31BCF2-D0FA-4B4E-9D8F-F8B275CDAC57}"
@@ -29,18 +29,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Git", "Git", "{7E1EAF8E-435
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet.Analyze", "NuGet.Analyze", "{0D85CDD5-F666-4481-9462-FC319FCEDCCC}"
 	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Analyze\init.ps1 = .nuget\NuGet.Analyze\init.ps1
 		.nuget\NuGet.Analyze.nuspec = .nuget\NuGet.Analyze.nuspec
 		.nuget\NuGet.Analyze\NuGet.Analyze.psd1 = .nuget\NuGet.Analyze\NuGet.Analyze.psd1
 		.nuget\NuGet.Analyze\NuGet.Analyze.psm1 = .nuget\NuGet.Analyze\NuGet.Analyze.psm1
-		.nuget\NuGet.Analyze\init.ps1 = .nuget\NuGet.Analyze\init.ps1
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet.InstallCommandLineExtension", "NuGet.InstallCommandLineExtension", "{4E530C45-9090-4B3F-8BC6-AC6C60FFB6B3}"
 	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.InstallCommandLineExtension\init.ps1 = .nuget\NuGet.InstallCommandLineExtension\init.ps1
 		.nuget\NuGet.InstallCommandLineExtension.nuspec = .nuget\NuGet.InstallCommandLineExtension.nuspec
 		.nuget\NuGet.InstallCommandLineExtension\NuGet.InstallCommandLineExtension.psd1 = .nuget\NuGet.InstallCommandLineExtension\NuGet.InstallCommandLineExtension.psd1
 		.nuget\NuGet.InstallCommandLineExtension\NuGet.InstallCommandLineExtension.psm1 = .nuget\NuGet.InstallCommandLineExtension\NuGet.InstallCommandLineExtension.psm1
-		.nuget\NuGet.InstallCommandLineExtension\init.ps1 = .nuget\NuGet.InstallCommandLineExtension\init.ps1
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuGet.Analyze.Cmdlets", "NuGet.Analyze.Cmdlets\NuGet.Analyze.Cmdlets.csproj", "{E62424D5-B4AE-4D04-AE73-D6115C8D726E}"
@@ -48,9 +48,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{CC011325-63F1-4C0F-8999-478616379587}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NuGet.Analyze.nuspec = .nuget\NuGet.Analyze.nuspec
-		.nuget\NuGet.InstallCommandLineExtension.1.0.nupkg = .nuget\NuGet.InstallCommandLineExtension.1.0.nupkg
-		.nuget\NuGet.InstallCommandLineExtension.nuspec = .nuget\NuGet.InstallCommandLineExtension.nuspec
 		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.InstallCommandLineExtension.nuspec = .nuget\NuGet.InstallCommandLineExtension.nuspec
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 		.nuget\nuspec.xsd = .nuget\nuspec.xsd
 	EndProjectSection
@@ -79,9 +78,9 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{0CB9CFBA-4EAB-4D42-A405-A8F63436B1B9} = {1BAEDB88-3D3C-4710-A4B0-5F7FA4FB241D}
+		{7E1EAF8E-4358-45ED-B9C3-635FD4754CC9} = {1BAEDB88-3D3C-4710-A4B0-5F7FA4FB241D}
 		{0D85CDD5-F666-4481-9462-FC319FCEDCCC} = {0CB9CFBA-4EAB-4D42-A405-A8F63436B1B9}
 		{4E530C45-9090-4B3F-8BC6-AC6C60FFB6B3} = {0CB9CFBA-4EAB-4D42-A405-A8F63436B1B9}
 		{55099349-2B0E-40BC-BA3D-80E64FC665EC} = {BC55DC57-229C-4882-B408-01D95D177263}
-		{7E1EAF8E-4358-45ED-B9C3-635FD4754CC9} = {1BAEDB88-3D3C-4710-A4B0-5F7FA4FB241D}
 	EndGlobalSection
 EndGlobal
