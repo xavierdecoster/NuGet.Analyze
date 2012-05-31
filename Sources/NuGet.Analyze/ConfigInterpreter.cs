@@ -39,7 +39,7 @@ namespace NuGet.Analyze
                     if (idAttribute != null && versionAttribute != null)
                     {
                         string id = idAttribute.Value;
-                        IVersionSpec versionSpec = new VersionSpec(new Version(versionAttribute.Value));
+                        IVersionSpec versionSpec = new VersionSpec(new SemanticVersion(versionAttribute.Value));
                         PackageDependency packageInfo = new PackageDependency(id, versionSpec);
                         packageDependencies.Add(packageInfo);
                     }
