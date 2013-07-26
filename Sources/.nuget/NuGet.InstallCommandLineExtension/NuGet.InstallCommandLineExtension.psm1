@@ -5,8 +5,7 @@ function Get-InstallPath {
     # Get the repository path
     $componentModel = Get-VSComponentModel
     $repositorySettings = $componentModel.GetService([NuGet.VisualStudio.IRepositorySettings])
-    $pathResolver = New-Object NuGet.DefaultPackagePathResolver($repositorySettings.RepositoryPath)
-    $pathResolver.GetInstallPath($package)
+	[System.IO.Path]::Combine($repositorySettings.RepositoryPath, $package.Id + "." + $package.Version.ToString())
 }
 
 function Install-CommandLineExtension {
