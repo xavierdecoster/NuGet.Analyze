@@ -30,9 +30,7 @@ namespace NuGet.Analyze
                 ? (RepositoryType)Enum.Parse(typeof (RepositoryType), Arguments.First(), true) 
                 : RepositoryType.Tfs;
 
-            IRepositoryWalker selectedRepositoryWalker = sourceControlWalkers
-                .Where(scw => scw.CommandAction == action)
-                .FirstOrDefault();
+            IRepositoryWalker selectedRepositoryWalker = sourceControlWalkers.FirstOrDefault(scw => scw.CommandAction == action);
 
             if (selectedRepositoryWalker != null)
                 selectedRepositoryWalker.AnalyzeRepository(Repository, Verbose);
