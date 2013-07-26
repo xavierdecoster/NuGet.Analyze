@@ -2,10 +2,10 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>NuGet.Analyze</id>
-    <version>1.2</version>
+    <version>2.0.0</version>
     <title>NuGet Analyze</title>
-    <authors>Xavier Decoster</authors>
-    <owners>Xavier Decoster</owners>
+    <authors>Xavier Decoster, Maarten Balliauw</authors>
+    <owners>Xavier Decoster, Maarten Balliauw</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://github.com/xavierdecoster/NuGet.Analyze/blob/master/COPYRIGHT.txt</licenseUrl>
     <projectUrl>https://github.com/xavierdecoster/NuGet.Analyze</projectUrl>

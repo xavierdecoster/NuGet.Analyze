@@ -80,7 +80,7 @@ namespace NuGet.Analyze.Test
         {
             var solutions = fileSystemWalker.GetSolutionsInDirectory(repository);
             Assert.IsNotNull(solutions);
-            Assert.IsTrue(solutions.IsEmpty());
+            Assert.IsFalse(solutions.IsEmpty());
         }
 
         /// <summary>

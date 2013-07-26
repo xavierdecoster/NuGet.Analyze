@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2010
+# Visual Studio 2012
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1BAEDB88-3D3C-4710-A4B0-5F7FA4FB241D}"
 	ProjectSection(SolutionItems) = preProject
 		AssemblyVersionInfo.cs = AssemblyVersionInfo.cs
@@ -43,8 +43,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet.InstallCommandLineExt
 		.nuget\NuGet.InstallCommandLineExtension\NuGet.InstallCommandLineExtension.psm1 = .nuget\NuGet.InstallCommandLineExtension\NuGet.InstallCommandLineExtension.psm1
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NuGet.Analyze.Cmdlets", "NuGet.Analyze.Cmdlets\NuGet.Analyze.Cmdlets.csproj", "{E62424D5-B4AE-4D04-AE73-D6115C8D726E}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{CC011325-63F1-4C0F-8999-478616379587}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NuGet.Analyze.nuspec = .nuget\NuGet.Analyze.nuspec
@@ -68,10 +66,6 @@ Global
 		{55099349-2B0E-40BC-BA3D-80E64FC665EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55099349-2B0E-40BC-BA3D-80E64FC665EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55099349-2B0E-40BC-BA3D-80E64FC665EC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E62424D5-B4AE-4D04-AE73-D6115C8D726E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E62424D5-B4AE-4D04-AE73-D6115C8D726E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E62424D5-B4AE-4D04-AE73-D6115C8D726E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E62424D5-B4AE-4D04-AE73-D6115C8D726E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

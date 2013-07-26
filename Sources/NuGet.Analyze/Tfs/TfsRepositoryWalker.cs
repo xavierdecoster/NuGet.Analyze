@@ -78,7 +78,7 @@ namespace NuGet.Analyze.Tfs
                 IEnumerable<PackageDependency> repositoryDependencies = GetPackageDependenciesFromRepositoriesConfig(teamProject, repository);
                 foreach (PackageDependency packageDependency in repositoryDependencies)
                 {
-                    if (teamProjectDependencies.Where(dp => dp.Id == packageDependency.Id && dp.VersionSpec == packageDependency.VersionSpec).FirstOrDefault() == null)
+                    if (teamProjectDependencies.FirstOrDefault(dp => dp.Id == packageDependency.Id && dp.VersionSpec == packageDependency.VersionSpec) == null)
                         teamProjectDependencies.Add(packageDependency);
                 }
             }
