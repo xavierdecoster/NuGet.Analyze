@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using System.IO;
+using System.Security;
 using NuGet.Common;
 
 namespace NuGet.Analyze.Test
@@ -47,6 +48,10 @@ namespace NuGet.Analyze.Test
                 System.Console.WindowWidth = value;
             }
         }
+
+        public Verbosity Verbosity { get; set; }
+        public bool IsNonInteractive { get; set; }
+
         public TextWriter ErrorWriter
         {
             get
@@ -82,6 +87,12 @@ namespace NuGet.Analyze.Test
         {
             System.Console.WriteLine(format, args);
         }
+
+        public void WriteLine(ConsoleColor color, string value, params object[] args)
+        {
+            throw new NotImplementedException();
+        }
+
         public void WriteError(object value)
         {
             this.WriteError(value.ToString());
@@ -139,6 +150,12 @@ namespace NuGet.Analyze.Test
                 System.Console.ForegroundColor = foregroundColor;
             }
         }
+
+        public void ReadSecureString(SecureString secureString)
+        {
+            throw new NotImplementedException();
+        }
+
         public void PrintJustified(int startIndex, string text)
         {
             this.PrintJustified(startIndex, text, this.WindowWidth);
@@ -180,6 +197,17 @@ namespace NuGet.Analyze.Test
             }
             return result;
         }
+
+        public ConsoleKeyInfo ReadKey()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string ReadLine()
+        {
+            throw new NotImplementedException();
+        }
+
         public void Log(MessageLevel level, string message, params object[] args)
         {
             switch (level)
@@ -204,6 +232,11 @@ namespace NuGet.Analyze.Test
                         return;
                     }
             }
+        }
+
+        public FileConflictResolution ResolveFileConflict(string message)
+        {
+            throw new NotImplementedException();
         }
     }
 }
